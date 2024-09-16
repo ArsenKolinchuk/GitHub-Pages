@@ -3,51 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Краса відкритого коду: Linux</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Основи Git</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Краса відкритого коду: Linux</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Головна</a></li>
-                <li><a href="#">Про Linux</a></li>
-                <li><a href="#">Переваги</a></li>
-                <li><a href="#">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
 
+    <!-- Навігаційне меню -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Системне програмування</h1>
+            <ul class="nav-links">
+                <li><a href="#intro">Що таке VCS?</a></li>
+                <li><a href="#advantages">Переваги Git</a></li>
+                <li><a href="#commands">Команди Git</a></li>
+                <li><a href="#certificate">Сертифікат</a></li>
+                <li><a href="#sources">Джерела</a></li>
+            </ul>
+            <!-- Кнопка меню для мобільних пристроїв -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Контент сторінки -->
+    <header>
+        <div class="container">
+            <h1>Вивчення Git</h1>
+            <p>Основні можливості та переваги системи контролю версій Git</p>
+        </div>
+    </header>
+    
     <main>
-        <section class="intro">
-            <h2>Чому Linux — це майбутнє?</h2>
-            <p>Linux — це не просто операційна система. Це філософія свободи, відкритості та спільної роботи. Завдяки відкритому коду кожен може внести свій внесок у її розвиток.</p>
-            <img src="linux-logo.png" alt="Логотип Linux" class="linux-logo">
+        <section id="intro">
+            <div class="container">
+                <h2>Що таке система контролю версій?</h2>
+                <p>Система контролю версій (VCS) дозволяє відслідковувати зміни у коді або файлах проекту. <strong>Git</strong> — одна з найпопулярніших розподілених VCS, яка використовується для відслідковування змін в коді, ведення історії змін і роботи з гілками.</p>
+            </div>
         </section>
 
-        <section class="features">
-            <h2>Основні переваги Linux</h2>
-            <div class="feature-card">
-                <h3>Безпека</h3>
-                <p>Linux забезпечує високий рівень безпеки завдяки системі прав доступу та активній спільноті розробників, яка постійно працює над вдосконаленням.</p>
+        <section id="advantages">
+            <div class="container">
+                <h2>Переваги Git</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Розподілена система</h3>
+                        <p>Кожен учасник має повну копію історії проекту.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Офлайн робота</h3>
+                        <p>Можливість роботи без підключення до мережі.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Гілки та злиття</h3>
+                        <p>Легке перемикання між гілками та злиття змін.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="feature-card">
-                <h3>Стабільність</h3>
-                <p>Багато серверів у світі використовують Linux через його надійність і стабільність роботи навіть при високих навантаженнях.</p>
+        <section id="commands">
+            <div class="container">
+                <h2>Базові команди Git</h2>
+                <ol>
+                    <li><strong>git init</strong> - Ініціалізація нового репозиторію Git в поточній папці.</li>
+                    <li><strong>git clone [url]</strong> - Клонування існуючого репозиторію з віддаленого сервера.</li>
+                    <li><strong>git status</strong> - Перевірка стану файлів у робочій директорії.</li>
+                    <li><strong>git add [файл]</strong> - Додавання файлу до індексації (для наступного коміту).</li>
+                    <li><strong>git commit -m "[повідомлення]"</strong> - Збереження змін у репозиторії з коментарем.</li>
+                    <li><strong>git push</strong> - Відправка локальних змін на віддалений репозиторій.</li>
+                    <li><strong>git pull</strong> - Оновлення локальної версії з віддаленого репозиторію.</li>
+                    <li><strong>git branch</strong> - Перегляд гілок у репозиторії.</li>
+                    <li><strong>git checkout [назва гілки]</strong> - Перемикання між гілками.</li>
+                    <li><strong>git merge [назва гілки]</strong> - Злиття іншої гілки в поточну.</li>
+                </ol>
             </div>
+        </section>
 
-            <div class="feature-card">
-                <h3>Гнучкість</h3>
-                <p>Ви можете повністю налаштувати Linux під свої потреби. Це система для користувачів, які хочуть максимального контролю над своїм середовищем.</p>
+        <section id="certificate">
+            <div class="container">
+                <h2>Сертифікат курсу по Git</h2>
+               
+                <!-- Додаємо зображення сертифіката -->
+                <img src="certificate-image.png" alt="Сертифікат курсу Git" style="max-width:100%; height:auto; margin-bottom:20px; border-radius:8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                
+            </div>
+        </section>
+
+        <section id="sources">
+            <div class="container">
+                <h2>Джерела інформації</h2>
+                <ul>
+                    <li><a href="https://proglib.io/p/git-for-beginners">Git для початківців — Proglib</a></li>
+                    <li><a href="https://habr.com/ru/post/541258/">Як працювати з Git: покроковий гайд — Habr</a></li>
+                    <li><a href="https://git-scm.com/doc">Офіційна документація Git</a></li>
+                    <li><a href="https://learngitbranching.js.org/">Learn Git Branching — Інтерактивний курс</a></li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Світ Linux. Всі права захищені.</p>
+        <div class="container">
+            <p>&copy; 2024 Вивчення Git</p>
+        </div>
     </footer>
+
+    <!-- Додаємо JavaScript для роботи меню -->
+    <script src="script.js"></script>
 </body>
 </html>
