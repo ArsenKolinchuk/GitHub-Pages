@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Основи Git та Linux</title>
+    <title>Основи Git</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,36 +13,23 @@
         <div class="container">
             <h1 class="logo">Системне програмування</h1>
             <ul class="nav-links">
-                <li><a href="#intro">Що таке VCS?</a></li>
-                <li><a href="#advantages">Переваги Git</a></li>
-                <li><a href="#commands">Команди Git</a></li>
-                <li><a href="#linux-info">ОС GNU/Linux</a></li>
-                <li><a href="#linux-commands">Команди Linux CLI</a></li>
-                <li><a href="#bash-script">Приклад BASH скрипта</a></li>
-                <li><a href="#certificate">Сертифікат</a></li>
-                <li><a href="#sources">Джерела</a></li>
+                <li><a href="git.html">Git</a></li>
+                <li><a href="linux.html">Linux</a></li>
             </ul>
-            <!-- Кнопка меню для мобільних пристроїв -->
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
         </div>
     </nav>
 
     <!-- Контент сторінки -->
     <header>
         <div class="container">
-            <h1>Вивчення Git та Linux</h1>
-            <p>Основні можливості Git та робота з командним рядком у Linux</p>
+            <h1>Вивчення Git</h1>
         </div>
     </header>
     
     <main>
         <section id="intro">
             <div class="container">
-                <h2>Що таке система контролю версій?</h2>
+                <h2>Коротка інформація про системи контролю версій</h2>
                 <p>Система контролю версій (VCS) дозволяє відслідковувати зміни у коді або файлах проекту. <strong>Git</strong> — одна з найпопулярніших розподілених VCS, яка використовується для відслідковування змін в коді, ведення історії змін і роботи з гілками.</p>
             </div>
         </section>
@@ -51,129 +37,36 @@
         <section id="advantages">
             <div class="container">
                 <h2>Переваги Git</h2>
-                <div class="features">
-                    <div class="feature">
-                        <h3>Розподілена система</h3>
-                        <p>Кожен учасник має повну копію історії проекту.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Офлайн робота</h3>
-                        <p>Можливість роботи без підключення до мережі.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Гілки та злиття</h3>
-                        <p>Легке перемикання між гілками та злиття змін.</p>
-                    </div>
-                </div>
+                <ul>
+                    <li>Розподілена система: кожен учасник має повну копію історії проекту.</li>
+                    <li>Офлайн робота: можливість роботи без підключення до мережі.</li>
+                    <li>Гілки та злиття: легке перемикання між гілками та злиття змін.</li>
+                </ul>
             </div>
         </section>
 
         <section id="commands">
             <div class="container">
-                <h2>Базові команди Git</h2>
+                <h2>10 базових команд Git</h2>
                 <ol>
-                    <li><strong>git init</strong> - Ініціалізація нового репозиторію Git в поточній папці.</li>
-                    <li><strong>git clone [url]</strong> - Клонування існуючого репозиторію з віддаленого сервера.</li>
-                    <li><strong>git status</strong> - Перевірка стану файлів у робочій директорії.</li>
-                    <li><strong>git add [файл]</strong> - Додавання файлу до індексації (для наступного коміту).</li>
-                    <li><strong>git commit -m "[повідомлення]"</strong> - Збереження змін у репозиторії з коментарем.</li>
-                    <li><strong>git push</strong> - Відправка локальних змін на віддалений репозиторій.</li>
+                    <li><strong>git init</strong> - Ініціалізація нового репозиторію.</li>
+                    <li><strong>git clone [url]</strong> - Клонування репозиторію.</li>
+                    <li><strong>git status</strong> - Перевірка стану файлів.</li>
+                    <li><strong>git add [файл]</strong> - Додавання файлу до індексації.</li>
+                    <li><strong>git commit -m "[повідомлення]"</strong> - Збереження змін.</li>
+                    <li><strong>git push</strong> - Відправка змін на віддалений репозиторій.</li>
                     <li><strong>git pull</strong> - Оновлення локальної версії з віддаленого репозиторію.</li>
-                    <li><strong>git branch</strong> - Перегляд гілок у репозиторії.</li>
+                    <li><strong>git branch</strong> - Перегляд гілок.</li>
                     <li><strong>git checkout [назва гілки]</strong> - Перемикання між гілками.</li>
                     <li><strong>git merge [назва гілки]</strong> - Злиття іншої гілки в поточну.</li>
                 </ol>
             </div>
         </section>
 
-        <!-- Нова секція: Коротка інформація про ОС GNU/Linux -->
-        <section id="linux-info">
-            <div class="container">
-                <h2>Коротка інформація про ОС GNU/Linux</h2>
-                <p><strong>GNU/Linux</strong> — це вільна та відкрита операційна система, яка базується на ядрі Linux і програмному забезпеченні GNU. Вона використовується на серверах, робочих станціях, вбудованих системах та багатьох інших пристроях. Відомі своєю стабільністю, безпекою та великою спільнотою розробників.</p>
-            </div>
-        </section>
-
-        <!-- Нова секція: Перелік найбільш популярних дистрибутивів -->
-        <section id="linux-distributions">
-            <div class="container">
-                <h2>Популярні дистрибутиви GNU/Linux</h2>
-                <ul>
-                    <li><strong>Ubuntu</strong> — дистрибутив, орієнтований на користувачів-початківців та офісне використання.</li>
-                    <li><strong>Debian</strong> — стабільний дистрибутив, який часто використовується на серверах.</li>
-                    <li><strong>Fedora</strong> — інноваційний дистрибутив з новими технологіями.</li>
-                    <li><strong>Arch Linux</strong> — дистрибутив для досвідчених користувачів, який потребує ручної конфігурації.</li>
-                    <li><strong>CentOS</strong> — дистрибутив, популярний на корпоративних серверах завдяки стабільності.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Нова секція: Приклади команд роботи в Linux CLI -->
-        <section id="linux-commands">
-            <div class="container">
-                <h2>Приклади команд роботи в Linux CLI</h2>
-                <ol>
-                    <li><strong>pwd</strong> — Показує поточний каталог.</li>
-                    <li><strong>echo</strong> — Виводить текст у термінал.</li>
-                    <li><strong>ls</strong> — Виводить список файлів у поточному каталозі.</li>
-                    <li><strong>cd</strong> — Змінює поточний каталог.</li>
-                    <li><strong>touch</strong> — Створює порожній файл.</li>
-                    <li><strong>mkdir</strong> — Створює новий каталог.</li>
-                    <li><strong>cp</strong> — Копіює файли або каталоги.</li>
-                    <li><strong>mv</strong> — Переміщує або перейменовує файли або каталоги.</li>
-                    <li><strong>rm</strong> — Видаляє файли або каталоги.</li>
-                    <li><strong>history</strong> — Виводить історію команд, виконаних у терміналі.</li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Нова секція: Приклад BASH-скрипта -->
-        <section id="bash-script">
-            <div class="container">
-                <h2>Приклад BASH-скрипта для авторизації</h2>
-                <p>Нижче наведено приклад простого BASH-скрипта, який імітує процес авторизації користувача в текстовому режимі:</p>
-                
-                <pre><code class="bash">
-#!/bin/bash
-
-# Заздалегідь визначені правильні ім'я користувача та пароль
-correct_username="admin"
-correct_password="password123"
-
-# Функція для введення пароля з прихованими символами
-function read_password {
-    prompt="$1"
-    stty -echo
-    printf "%s" "$prompt"
-    read password
-    stty echo
-    printf "\n"
-}
-
-# Запит на введення імені користувача
-echo "Вітаємо! Будь ласка, увійдіть в систему."
-read -p "Ім'я користувача: " username
-
-# Запит на введення пароля (символи не відображаються)
-read_password "Пароль: "
-
-# Перевірка введених даних
-if [[ "$username" == "$correct_username" && "$password" == "$correct_password" ]]; then
-    echo "Авторизація пройшла успішно. Вітаємо, $username!"
-else
-    echo "Невірне ім'я користувача або пароль. Спробуйте ще раз."
-fi
-                </code></pre>
-            </div>
-        </section>
-
         <section id="certificate">
             <div class="container">
                 <h2>Сертифікат курсу по Git</h2>
-               
-                <!-- Додаємо зображення сертифіката -->
-                <img src="certificate-image.png" alt="Сертифікат курсу Git" style="max-width:100%; height:auto; margin-bottom:20px; border-radius:8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-                
+                <img src="certificate-image.png" alt="Сертифікат" style="max-width:100%; height:auto;">
             </div>
         </section>
 
@@ -181,10 +74,9 @@ fi
             <div class="container">
                 <h2>Джерела інформації</h2>
                 <ul>
-                    <li><a href="https://proglib.io/p/git-for-beginners">Git для початківців — Proglib</a></li>
-                    <li><a href="https://habr.com/ru/post/541258/">Як працювати з Git: покроковий гайд — Habr</a></li>
+                    <li><a href="https://proglib.io/p/git-for-beginners">Git для початківців</a></li>
+                    <li><a href="https://habr.com/ru/post/541258/">Як працювати з Git</a></li>
                     <li><a href="https://git-scm.com/doc">Офіційна документація Git</a></li>
-                    <li><a href="https://learngitbranching.js.org/">Learn Git Branching — Інтерактивний курс</a></li>
                 </ul>
             </div>
         </section>
@@ -195,9 +87,5 @@ fi
             <p>&copy; 2024 Вивчення Git та Linux</p>
         </div>
     </footer>
-
-    <!-- Додаємо JavaScript для роботи меню -->
-    <script src="script.js"></script>
 </body>
 </html>
-
