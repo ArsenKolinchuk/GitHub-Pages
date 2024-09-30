@@ -1,32 +1,49 @@
-/* Основні стилі */
+/* Базові стилі */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.8; /* Трохи збільшене міжрядкове відстань */
-    font-size: 16px; /* Збільшення розміру тексту */
 }
 
-/* Контейнер */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px;
 }
 
-.container p{
-   font-size: 20px;
+h1, h2, h3 {
+    color: #333;
 }
 
-/* Меню */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p, ul, ol, li {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Навігація */
 .navbar {
     background-color: #333;
-    color: white;
-    padding: 20px 0;
-    z-index: 100;
+    color: #fff;
+    padding: 10px 0;
 }
 
 .navbar .container {
@@ -35,192 +52,188 @@ body {
     align-items: center;
 }
 
-.navbar .logo {
-    font-size: 1.7em; /* Трохи більший розмір логотипа */
-    font-weight: bold;
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
-}
-
-.nav-links li {
-    margin-left: 30px;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.4em; /* Трохи більший текст у меню */
-    transition: color 0.3s;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #000; /* Зміна кольору при наведенні на чорний */
-}
-
-/* Стилі для секцій */
-section {
-    margin-bottom: 60px;
-    padding: 40px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 2.2em; /* Трохи більший розмір заголовка */
-    color: #000; /* Зміна кольору заголовка на чорний */
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-section p,
-section ol,
-section ul {
-    font-size: 1.3em; /* Трохи більший текст в абзацах */
-    line-height: 1.9;
-}
-
-/* Блоки переваг */
-#advantages .features {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    gap: 40px;
-}
-
-#advantages .feature {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
-#advantages .feature h3 {
-    font-size: 1.7em; /* Трохи більший заголовок у блоці переваг */
-    margin-bottom: 15px;
-}
-
-#advantages .feature p {
-    font-size: 1.3em; /* Трохи більший текст у блоці переваг */
-}
-
-/* Команди Git */
-#commands ol {
-    background-color: #fafafa;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    list-style-type: decimal;
-    font-size: 1.3em; /* Трохи більший текст у списку команд */
-    margin-left: 0;
-}
-
-#commands ol li {
-    margin-bottom: 15px;
-}
-
-/* Секція сертифіката */
-#certificate {
-    text-align: center;
-}
-
-#certificate img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-#certificate .btn {
-    display: inline-block;
-    background-color: #000; /* Кнопка чорного кольору */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.4em; /* Трохи більший текст кнопки */
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-#certificate .btn:hover {
-    background-color: #333; /* Темніший відтінок чорного при наведенні */
-}
-
-/* Футер */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.2em; /* Трохи більший текст у футері */
-}
-
-/* Посилання */
-a {
-    color: #000; /* Чорний колір для посилань */
-    text-decoration: none;
-}
-
-a:hover {
     text-decoration: underline;
 }
 
 /* Стилі для бургер-меню на мобільних пристроях */
 .burger {
     display: none;
-    cursor: pointer;
 }
 
-.burger div {
-    width: 30px;
+.line1, .line2, .line3 {
+    width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #fff;
     margin: 5px;
-    transition: all 0.3s;
 }
 
-/* Адаптивність */
-@media (max-width: 768px) {
-    .nav-links {
+/* Секції */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px 0;
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для секції "Переваги Git" */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #4CAF50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для списків команд Git та Linux */
+ol, ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+ol li {
+    font-weight: bold;
+}
+
+/* Стилі для секції сертифіката */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для нових секцій GNU/Linux */
+#linux-info, #linux-distributions, #linux-commands {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#linux-info p, #linux-distributions ul, #linux-commands ol {
+    margin-bottom: 10px;
+}
+
+#linux-distributions ul, #linux-commands ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+#linux-distributions li, #linux-commands li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#linux-commands li {
+    font-weight: bold;
+}
+
+/* Секція "Джерела інформації" */
+#sources ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#sources li {
+    margin-bottom: 10px;
+}
+
+#sources a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#sources a:hover {
+    text-decoration: underline;
+}
+
+/* Підвал */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Адаптивний дизайн */
+@media (min-width: 768px) {
+    .features {
+        flex-direction: row;
+    }
+
+    .feature {
+        flex: 1;
+    }
+
+    .burger {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
     }
+}
 
-    .nav-links.active {
-        display: flex;
-    }
-
+@media (max-width: 767px) {
     .burger {
         display: block;
     }
 
-    .burger.toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .burger.toggle .line2 {
-        opacity: 0;
-    }
-
-    .burger.toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    /* Вертикальні блоки на мобільних пристроях */
-    #advantages .features {
+    .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+        background-color: #333;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 150px;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 }
