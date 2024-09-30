@@ -169,6 +169,30 @@ img {
     font-weight: bold;
 }
 
+/* Стилі для секції з прикладом BASH-скрипта */
+pre {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    font-size: 0.95em;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Перенос тексту */
+}
+
+/* Додатковий стиль для BASH-коду */
+code.bash {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
 /* Секція "Джерела інформації" */
 #sources ul {
     list-style: none;
