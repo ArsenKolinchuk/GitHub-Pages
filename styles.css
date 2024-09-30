@@ -115,23 +115,45 @@ strong {
     font-weight: bold;
 }
 
-/* Стилі для команд */
-code {
-    background-color: #f4f4f4;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-family: 'Courier New', monospace;
-    color: #e53e3e;
+/* Стилі для BASH-скрипта */
+pre, code {
+    background-color: #2d2d2d; /* Темний фон */
+    color: #f8f8f2; /* Основний текст */
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-pre {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    overflow-x: auto;
-    margin-top: 20px;
+code .comment {
+    color: #75715e; /* Коментарі (темно-зелений) */
 }
+
+code .command {
+    color: #66d9ef; /* Команди (блакитний) */
+}
+
+code .string {
+    color: #a6e22e; /* Рядки (зелений) */
+}
+
+code .variable {
+    color: #fd971f; /* Змінні (оранжевий) */
+}
+
+code .keyword {
+    color: #f92672; /* Ключові слова (рожевий) */
+}
+
+/* Додаткові стилі для коду */
+pre {
+    line-height: 1.5;
+    margin-top: 20px;
+    white-space: pre-wrap;
+}
+
 
 /* Стилі для кнопок та посилань */
 a {
