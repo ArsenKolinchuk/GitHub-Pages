@@ -114,7 +114,6 @@ strong {
     color: #333;
     font-weight: bold;
 }
-
 /* Стилі для BASH-скрипта */
 pre, code {
     background-color: #2d2d2d; /* Темний фон */
@@ -122,13 +121,16 @@ pre, code {
     padding: 15px;
     border-radius: 8px;
     font-family: 'Courier New', Courier, monospace; /* Моноширинний шрифт */
-    font-size: 1em;
-    overflow-x: auto;
+    font-size: 1.1em; /* Трохи збільшено розмір шрифту */
+    overflow-x: auto; /* Додає горизонтальний скрол */
+    white-space: pre-wrap; /* Обтікання тексту */
+    word-wrap: break-word; /* Розрив слів при необхідності */
+    line-height: 1.8; /* Збільшено інтервал між рядками */
+    letter-spacing: 0.2px; /* Невелике розширення символів для кращої читабельності */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.5px; /* Збільшено відстань між літерами */
-    line-height: 1.6; /* Збільшено інтервал між рядками */
 }
 
+/* Колірні схеми для синтаксису */
 code .comment {
     color: #75715e; /* Коментарі (темно-зелений) */
 }
@@ -151,9 +153,9 @@ code .keyword {
 
 /* Додаткові стилі для коду */
 pre {
-    line-height: 1.6; /* Кориговано інтервал між рядками */
     margin-top: 20px;
-    white-space: pre-wrap; /* Коректне обтікання тексту */
+    white-space: pre-wrap; /* Обертання рядків */
+    word-wrap: break-word; /* Перенос довгих слів */
 }
 
 /* Стилі для кнопок та посилань */
