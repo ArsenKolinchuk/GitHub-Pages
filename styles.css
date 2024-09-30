@@ -51,6 +51,12 @@ p, ul, ol, li {
     justify-content: space-between;
     align-items: center;
 }
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff; /* Зробити текст білим */
+    margin-left: 10px; /* Трохи відступу для кращого вигляду */
+}
 
 .logo {
     font-size: 1.5em;
@@ -58,10 +64,17 @@ p, ul, ol, li {
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: space-around; /* Розміщує елементи рівномірно */
+    flex-wrap: nowrap; /* Забороняє перенос елементів */
+    padding: 10px 0; /* Додає вертикальний відступ */
 }
+
+.nav-links li {
+    margin: 0 15px; /* Зменшений відступ між елементами */
+    font-size: 14px; /* Зменшує розмір шрифту */
+}
+
 
 .nav-links a {
     color: #fff;
