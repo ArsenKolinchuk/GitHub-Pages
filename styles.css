@@ -1,49 +1,31 @@
 /* Базові стилі */
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 18px;
+}
+
+/* Контейнер */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
 }
 
-h1, h2, h3 {
-    color: #333;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2em;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-p, ul, ol, li {
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-/* Навігація */
+/* Стилі для навігації */
 .navbar {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
+    font-size: 1.1em;
 }
 
 .navbar .container {
@@ -51,226 +33,157 @@ p, ul, ol, li {
     justify-content: space-between;
     align-items: center;
 }
-.logo {
-    font-size: 2em;
-    font-weight: 700;
-    color: #fff; /* Зробити текст білим */
-    margin-left: 10px; /* Трохи відступу для кращого вигляду */
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: 700;
-}
 
 .nav-links {
+    list-style: none;
     display: flex;
-    justify-content: space-around; /* Розміщує елементи рівномірно */
-    flex-wrap: nowrap; /* Забороняє перенос елементів */
-    padding: 10px 0; /* Додає вертикальний відступ */
+    gap: 20px;
 }
 
 .nav-links li {
-    margin: 0 15px; /* Зменшений відступ між елементами */
-    font-size: 14px; /* Зменшує розмір шрифту */
+    display: inline;
 }
-
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    padding: 10px 20px;
+    transition: background 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    background-color: #575757;
+    border-radius: 5px;
 }
 
-/* Стилі для бургер-меню на мобільних пристроях */
-.burger {
-    display: none;
-}
-
-.line1, .line2, .line3 {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px;
-}
-
-/* Секції */
+/* Стилі для заголовка */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-main {
-    padding: 20px 0;
-    background-color: white;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Стилі для секції "Переваги Git" */
-.features {
+    background: url('https://source.unsplash.com/1600x400/?technology,code') no-repeat center center/cover;
+    color: #fff;
+    height: 200px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-.feature {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-left: 5px solid #4CAF50;
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Основні стилі для секцій */
+main {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+main section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-/* Стилі для списків команд Git та Linux */
-ol, ul {
+main section h2 {
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+main section p,
+main section ul,
+main section ol {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Список */
+ul, ol {
+    margin-left: 20px;
     padding-left: 20px;
 }
 
-li {
-    margin-bottom: 10px;
+ul li, ol li {
+    margin-bottom: 8px;
 }
 
-ol li {
-    font-weight: bold;
-}
-
-/* Стилі для секції сертифіката */
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Стилі для нових секцій GNU/Linux */
-#linux-info, #linux-distributions, #linux-commands {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-#linux-info p, #linux-distributions ul, #linux-commands ol {
-    margin-bottom: 10px;
-}
-
-#linux-distributions ul, #linux-commands ol {
-    list-style: none;
-    padding-left: 0;
-}
-
-#linux-distributions li, #linux-commands li {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#linux-commands li {
-    font-weight: bold;
-}
-
-/* Стилі для секції з прикладом BASH-скрипта */
-pre {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    overflow-x: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-code {
-    font-family: 'Courier New', Courier, monospace;
+strong {
     color: #333;
-    font-size: 0.95em;
-    line-height: 1.6;
-    white-space: pre-wrap; /* Перенос тексту */
-}
-
-/* Додатковий стиль для BASH-коду */
-code.bash {
-    color: #4CAF50;
     font-weight: bold;
 }
 
-/* Секція "Джерела інформації" */
-#sources ul {
-    list-style: none;
-    padding-left: 0;
+/* Стилі для команд */
+code {
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #e53e3e;
 }
 
-#sources li {
-    margin-bottom: 10px;
+pre {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 20px;
 }
 
-#sources a {
-    color: #4CAF50;
+/* Стилі для кнопок та посилань */
+a {
+    color: #007BFF;
     text-decoration: none;
-    font-weight: 500;
 }
 
-#sources a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* Підвал */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Стилі для футера */
 footer {
     background-color: #333;
-    color: white;
-    padding: 20px 0;
+    color: #fff;
     text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
     margin: 0;
+    font-size: 0.9em;
 }
 
-/* Адаптивний дизайн */
-@media (min-width: 768px) {
-    .features {
-        flex-direction: row;
-    }
-
-    .feature {
-        flex: 1;
-    }
-
-    .burger {
-        display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .burger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+    .navbar .container {
         flex-direction: column;
-        gap: 10px;
-        background-color: #333;
-        padding: 10px;
-        position: absolute;
-        top: 50px;
-        right: 20px;
-        width: 150px;
     }
 
-    .nav-links.active {
-        display: flex;
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .container {
+        width: 90%;
     }
 }
