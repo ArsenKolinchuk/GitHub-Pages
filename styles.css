@@ -121,10 +121,12 @@ pre, code {
     color: #f8f8f2; /* Основний текст */
     padding: 15px;
     border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace; /* Моноширинний шрифт */
     font-size: 1em;
     overflow-x: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px; /* Збільшено відстань між літерами */
+    line-height: 1.6; /* Збільшено інтервал між рядками */
 }
 
 code .comment {
@@ -149,11 +151,10 @@ code .keyword {
 
 /* Додаткові стилі для коду */
 pre {
-    line-height: 1.5;
+    line-height: 1.6; /* Кориговано інтервал між рядками */
     margin-top: 20px;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* Коректне обтікання тексту */
 }
-
 
 /* Стилі для кнопок та посилань */
 a {
