@@ -69,19 +69,37 @@
             <div class="container">
                 <h2>BASH-скрипт авторизації</h2>
                 <pre><code class="bash">
-#!/bin/bash
-correct_username="admin"
-correct_password="password123"
-echo "Введіть ім'я користувача: "
-read username
-echo "Введіть пароль: "
-read -s password
-if [[ "$username" == "$correct_username" && "$password" == "$correct_password" ]]; then
-    echo "Авторизація успішна!"
-else
-    echo "Невірне ім'я користувача або пароль!"
-fi
-                </code></pre>
+<span class="comment">#!/bin/bash</span>
+
+# Заздалегідь визначені правильні ім'я користувача та пароль
+<span class="variable">correct_username</span>="<span class="string">admin</span>"
+<span class="variable">correct_password</span>="<span class="string">password123</span>"
+
+# Функція для введення пароля з прихованими символами
+<span class="keyword">function</span> <span class="command">read_password</span> {
+    <span class="variable">prompt</span>="$1"
+    <span class="command">stty -echo</span>
+    <span class="command">printf</span> "%s" "$prompt"
+    <span class="command">read</span> <span class="variable">password</span>
+    <span class="command">stty echo</span>
+    <span class="command">printf</span> "\n"
+}
+
+# Запит на введення імені користувача
+<span class="command">echo</span> "Вітаємо! Будь ласка, увійдіть в систему."
+<span class="command">read</span> -p "<span class="string">Ім'я користувача:</span> " <span class="variable">username</span>
+
+# Запит на введення пароля (символи не відображаються)
+<span class="command">read_password</span> "<span class="string">Пароль:</span>"
+
+# Перевірка введених даних
+<span class="keyword">if</span> [[ "$<span class="variable">username</span>" == "$<span class="variable">correct_username</span>" && "$<span class="variable">password</span>" == "$<span class="variable">correct_password</span>" ]]; <span class="keyword">then</span>
+    <span class="command">echo</span> "Авторизація пройшла успішно. Вітаємо, $<span class="variable">username</span>!"
+<span class="keyword">else</span>
+    <span class="command">echo</span> "Невірне ім'я користувача або пароль. Спробуйте ще раз."
+<span class="keyword">fi</span>
+</code></pre>
+
             </div>
         </section>
 
