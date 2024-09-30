@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основи Linux</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Навігаційне меню -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Системне програмування</h1>
+            <ul class="nav-links">
+                <li><a href="git.html">Git</a></li>
+                <li><a href="linux.html">Linux</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Контент сторінки -->
+    <header>
+        <div class="container">
+            <h1>Вивчення Linux</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section id="linux-info">
+            <div class="container">
+                <h2>Коротка інформація про ОС GNU/Linux</h2>
+                <p><strong>GNU/Linux</strong> — вільна операційна система, відома своєю стабільністю, безпекою та великою спільнотою розробників.</p>
+            </div>
+        </section>
+
+        <section id="linux-distributions">
+            <div class="container">
+                <h2>Популярні дистрибутиви Linux</h2>
+                <ul>
+                    <li><strong>Ubuntu</strong> — для користувачів-початківців.</li>
+                    <li><strong>Debian</strong> — стабільний і надійний для серверів.</li>
+                    <li><strong>Fedora</strong> — інноваційний дистрибутив.</li>
+                    <li><strong>Arch Linux</strong> — для досвідчених користувачів.</li>
+                    <li><strong>CentOS</strong> — популярний у корпоративних середовищах.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="linux-commands">
+            <div class="container">
+                <h2>Приклади команд роботи в Linux CLI</h2>
+                <ol>
+                    <li><strong>pwd</strong> — Показує поточний каталог.</li>
+                    <li><strong>echo</strong> — Виводить текст у термінал.</li>
+                    <li><strong>ls</strong> — Виводить список файлів.</li>
+                    <li><strong>cd</strong> — Змінює каталог.</li>
+                    <li><strong>touch</strong> — Створює файл.</li>
+                    <li><strong>mkdir</strong> — Створює каталог.</li>
+                    <li><strong>cp</strong> — Копіює файли.</li>
+                    <li><strong>mv</strong> — Переміщує файли.</li>
+                    <li><strong>rm</strong> — Видаляє файли.</li>
+                    <li><strong>history</strong> — Виводить історію команд.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="bash-script">
+            <div class="container">
+                <h2>BASH-скрипт авторизації</h2>
+                <pre><code class="bash">
+#!/bin/bash
+correct_username="admin"
+correct_password="password123"
+echo "Введіть ім'я користувача: "
+read username
+echo "Введіть пароль: "
+read -s password
+if [[ "$username" == "$correct_username" && "$password" == "$correct_password" ]]; then
+    echo "Авторизація успішна!"
+else
+    echo "Невірне ім'я користувача або пароль!"
+fi
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sources">
+            <div class="container">
+                <h2>Джерела інформації</h2>
+                <ul>
+                    <li><a href="https://www.gnu.org/">GNU Project</a></li>
+                    <li><a href="https://kernel.org/">Linux Kernel</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Вивчення Git та Linux</p>
+        </div>
+    </footer>
+</body>
+</html>
