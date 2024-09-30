@@ -19,6 +19,7 @@
                 <li><a href="#commands">Команди Git</a></li>
                 <li><a href="#linux-info">ОС GNU/Linux</a></li>
                 <li><a href="#linux-commands">Команди Linux CLI</a></li>
+                <li><a href="#bash-script">Приклад BASH скрипта</a></li>
                 <li><a href="#certificate">Сертифікат</a></li>
                 <li><a href="#sources">Джерела</a></li>
             </ul>
@@ -126,6 +127,46 @@
             </div>
         </section>
 
+        <!-- Нова секція: Приклад BASH-скрипта -->
+        <section id="bash-script">
+            <div class="container">
+                <h2>Приклад BASH-скрипта для авторизації</h2>
+                <p>Нижче наведено приклад простого BASH-скрипта, який імітує процес авторизації користувача в текстовому режимі:</p>
+                
+                <pre><code class="bash">
+#!/bin/bash
+
+# Заздалегідь визначені правильні ім'я користувача та пароль
+correct_username="admin"
+correct_password="password123"
+
+# Функція для введення пароля з прихованими символами
+function read_password {
+    prompt="$1"
+    stty -echo
+    printf "%s" "$prompt"
+    read password
+    stty echo
+    printf "\n"
+}
+
+# Запит на введення імені користувача
+echo "Вітаємо! Будь ласка, увійдіть в систему."
+read -p "Ім'я користувача: " username
+
+# Запит на введення пароля (символи не відображаються)
+read_password "Пароль: "
+
+# Перевірка введених даних
+if [[ "$username" == "$correct_username" && "$password" == "$correct_password" ]]; then
+    echo "Авторизація пройшла успішно. Вітаємо, $username!"
+else
+    echo "Невірне ім'я користувача або пароль. Спробуйте ще раз."
+fi
+                </code></pre>
+            </div>
+        </section>
+
         <section id="certificate">
             <div class="container">
                 <h2>Сертифікат курсу по Git</h2>
@@ -159,3 +200,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
